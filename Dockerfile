@@ -1,14 +1,13 @@
-# Step 1: Use OpenJDK 17 as base image
-FROM openjdk:17-jdk-slim
-
-# Step 2: Set working directory inside container
+# Step 1: Build the application using Maven
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn clean package -DskipTests
 
-# Step 3: Copy the JAR file from target folder to container
-COPY target/*.jar app.jar
-
-# Step 4: Expose the port your Spring Boot app runs on
+# Step 2: Run the built JAR file
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Step 5: Run the Spring Boot application
 ENTRYPOINT ["java", "-jar", "app.jar"]
