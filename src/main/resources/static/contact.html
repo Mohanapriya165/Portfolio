@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohanapriya — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">MOHANAPRIYA S</div>
+      <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html" style="background: rgba(255,255,255,0.08);">Contact</a>
+      </nav>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <main class="container reveal">
+      <section class="contact-section">
+        <h2>Get in Touch 📧</h2>
+        <p class="center" style="margin-bottom: 24px;">I'm open to new opportunities and collaborations. Let's connect!</p>
+
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="name" name="name" class="input" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" class="input" placeholder="Your Email" required>
+          <input type="text" id="subject" name="subject" class="input" placeholder="Subject" required> 
+          <textarea id="message" name="message" rows="5" class="input" placeholder="Your Message" required></textarea>
+
+          <div class="center info-row" style="margin-top: 18px;">
+            <button type="submit" class="btn">Send Message</button>
+            <a href="https://www.linkedin.com/in/mohanapriya-s-5b19b0287/" target="_blank" class="social-icon-link linkedin">in</a>
+            <a href="https://github.com/Mohanapriya165" target="_blank" class="social-icon-link github">&gt;_</a>
+          </div>
+        </form>
+
+        <div class="center" style="margin-top: 50px;">
+          <h3>Direct Contact</h3>
+          <div class="info-row" style="margin-top: 15px;">
+            <div class="info-pill">
+              <strong>Email:</strong>
+              <a href="mailto:monikamonika17929@gmail.com" style="color: var(--white); text-decoration: none;">monikamonika17929@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 Mohanapriya</p>
+    </div>
+  </footer>
+
+  <div id="popup" class="popup">Your message has been sent successfully!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
